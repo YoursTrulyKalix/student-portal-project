@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>Login</title>
+    <link rel=”stylesheet” href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
+    <style>
+*{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:  sans-serif;
+        }
+
+        Body {
+            Background: #f0f2f5;
+            Display: flex;
+            Justify-content: center;
+            Align-items: center;
+            Height: 100vh;
+        }
+
+        .login-card {
+            Background: #fff;
+            Padding: 2rem;
+            Border-radius: 15px;
+            Box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            Width: 100%;
+            Max-width: 400px;
+            Text-align: center;
+        }
+
+        H2 { margin-bottom: 1.5rem; color: #333; }
+
+        .input-group {
+            Margin-bottom: 1.2rem;
+            Position: relative;
+            Text-align: left;
+        }
+
+        Input {
+            Width: 100%;
+            Padding: 12px 40px 12px 12px;
+            Border: 1px solid #ddd;
+            Border-radius: 8px;
+            Font-size: 1rem;
+        }
+
+        /* Password Toggle Setup */
+        .pass-wrapper { position: relative; }
+        
+        #toggle-pass { display: none; }
+        
+        .toggle-label {
+            Position: absolute;
+            Right: 12px;
+            Top: 50%;
+            Transform: translateY(-50%);
+            Cursor: pointer;
+            Color: #777;
+        }
+
+        /* CSS Icon Swap Logic */
+        #toggle-pass:checked ~ .toggle-label i::before {
+            Content: “\f06e”; 
+            Color: #1877f2;
+        }
+
+        .login-btn {
+            Width: 100%;
+            Padding: 12px;
+            Background: #1877f2;
+            Color: white;
+            Border: none;
+            Border-radius: 8px;
+            Font-weight: bold;
+            Cursor: pointer;
+            Transition: 0.3s;
+        }
+
+        .login-btn:hover { background: #166fe5; }
+
+        .social-login {
+            Margin-top: 1.5rem;
+            Border-top: 1px solid #eee;
+            Padding-top: 1.5rem;
+        }
+
+        .social-login p {
+            Font-size: 0.8rem;
+            Color: #777;
+            Margin-bottom: 1rem;
+        }
+
+        .icon-wrapper {
+            Display: flex;
+            Justify-content: center;
+            Gap: 20px;
+        }
+
+        .icon-wrapper a {
+            Font-size: 1.5rem;
+            Transition: transform 0.2s;
+            Text-decoration: none;
+        }
+
+        .icon-wrapper a:hover { transform: scale(1.2); }
+
+        .fa-facebook { color: #1877F2; }
+        .fa-instagram { color: #E4405F; }
+        .fa-tiktok { color: #010101; }
+        .fa-envelope { color: #DB4437; } /* Gmail icon */
+
+    </style>
+</head>
+<body>
+
+    <div class=”login-card”>
+        <h2>Login</h2>
+        
+        <form>
+            <div class=”input-group”>
+                <input type=”text” placeholder=”Username” required>
+            </div>
+
+            <div class=”input-group pass-wrapper”>
+                <input type=”password” id=”password-field” placeholder=”Password” required>
+                <input type=”checkbox” id=”toggle-pass”>
+                <label for=”toggle-pass” class=”toggle-label”>
+                    <I class=”fa-solid fa-eye-slash”></i>
+                </label>
+            </div>
+
+            <button type=”submit” class=”login-btn”>Log In</button>
+        </form>
+
+        <div class=”social-login”>
+            <p>Or login with</p>
+            <div class=”icon-wrapper”>
+                <a href=https://facebook.com target=”_blank”><I class=”fa-brands fa-facebook”></i></a>
+                <a href=https://instagram.com target=”_blank”><I class=”fa-brands fa-instagram”></i></a>
+                <a href=https://tiktok.com target=”_blank”><I class=”fa-brands fa-tiktok”></i></a>
+                <a href=mailto:example@gmail.com><I class=”fa-solid fa-envelope”></i></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
